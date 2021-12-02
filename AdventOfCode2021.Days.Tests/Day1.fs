@@ -1,6 +1,7 @@
 module AdventOfCode2021.Days.Tests.Day1
 
 open AdventOfCode2021.Days
+open AdventOfCode2021.Helpers
 open NUnit.Framework
 
 [<Test>]
@@ -31,5 +32,25 @@ let ``given fluctuating Readings, totalIncreases is correct`` () =
 let ``given continually ascending Readings, totalIncreases is total readings - 1`` () =
     let continuallyIncreasing = [1..10]
     Assert.AreEqual(List.length continuallyIncreasing - 1, Day1.totalIncreases continuallyIncreasing)
+    
+[<Test>]
+let ``given 0 Readings, mapScanningWindowTotals returns 0 items`` () =
+    let result = Day1.mapScanningWindowTotals []
+    Assert.AreEqual(0, List.length(result))
+    
+[<Test>]
+let ``given 1 Reading, mapScanningWindowTotals returns 1 item`` () =
+    let result = Day1.mapScanningWindowTotals [1]
+    Assert.AreEqual(1, List.length(result))
+    
+[<Test>]
+let ``given 3 Readings, mapScanningWindowTotals first item is sum of first 3 readings`` () =
+    let readings = [1; 5; 10]
+    
+    let result = Day1.mapScanningWindowTotals readings
+    let first = Lists.first result
+        
+    Assert.AreEqual(List.sum readings, first.Value)
+
     
     

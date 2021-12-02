@@ -8,4 +8,8 @@
         <Compile Include="Day1.fs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\AdventOfCode2021.Helpers\AdventOfCode2021.Helpers.fsproj" />
+    </ItemGroup>
+
 </Project>
