@@ -9,14 +9,10 @@ let sub:AdventOfCode2021.Days.Day2.Sub = {
     Depth = 0
 }
 
-let lines = Seq.toList puzzleData
-let parsedCommands = List.map AdventOfCode2021.Days.Day2.parseCommand lines
-let rec getRealCommands commands =
-    match commands with
-    | (Some(command), amount) :: tail -> (command, amount) :: getRealCommands tail
-    | (None, _) :: tail -> getRealCommands tail
-    | [] -> []
+let c = (puzzleData
+|> Seq.toList
+|> List.map AdventOfCode2021.Days.Day2.parseCommand)
 
-let result = AdventOfCode2021.Days.Day2.move (sub, parsedCommands)
+let result = AdventOfCode2021.Days.Day2.move (sub, c)
 
 let answer = result.Depth * result.Horiz
