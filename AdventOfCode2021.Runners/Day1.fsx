@@ -2,9 +2,11 @@
 
 let toInt (readings:seq<string>) =
     Seq.map (fun s -> s |> int) readings
-let readings = System.IO.File.ReadLines("./AdventOfCode2021.Runners/bin/Debug/net5.0/Day1PuzzleInput.txt")
+let exampleData = System.IO.File.ReadLines("./AdventOfCode2021.Runners/bin/Debug/net5.0/Day1ExampleData.txt")
+let puzzleData = System.IO.File.ReadLines("./AdventOfCode2021.Runners/bin/Debug/net5.0/Day1PuzzleInput.txt")
 
-readings
+puzzleData
 |> toInt
 |> Seq.toList
+|> AdventOfCode2021.Days.Day1.mapScanningWindowTotals
 |> AdventOfCode2021.Days.Day1.totalIncreases

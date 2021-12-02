@@ -2,5 +2,13 @@
 
 module Lists =
     let first = function
-        | head :: _ -> Some head
+        | first :: _ -> Some first
+        | _ -> None
+        
+    let second = function
+        | _ :: second :: _ -> Some second
+        | _ -> None
+        
+    let third = function
+        | _ :: _ :: third :: _ -> Some third
         | _ -> None

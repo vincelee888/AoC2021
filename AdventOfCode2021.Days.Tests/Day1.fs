@@ -51,6 +51,24 @@ let ``given 3 Readings, mapScanningWindowTotals first item is sum of first 3 rea
     let first = Lists.first result
         
     Assert.AreEqual(List.sum readings, first.Value)
+    
+[<Test>]
+let ``given 3 Readings, mapScanningWindowTotals second item is sum of last 2 readings`` () =
+    let readings = [1; 5; 10]
+    
+    let result = Day1.mapScanningWindowTotals readings
+    let second = Lists.second result
+        
+    Assert.AreEqual(15, second.Value)
+    
+[<Test>]
+let ``given 3 Readings, mapScanningWindowTotals third item is last reading`` () =
+    let readings = [1; 5; 10]
+    
+    let result = Day1.mapScanningWindowTotals readings
+    let third = Lists.third result
+        
+    Assert.AreEqual(10, third.Value)
 
     
     

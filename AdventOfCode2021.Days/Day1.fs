@@ -18,5 +18,9 @@ module Day1 =
         | first :: _ -> [(first)]
         | _ -> []
         
-    let mapScanningWindowTotals readings =
-        getWindowValue readings
+    let rec mapScanningWindowTotals readings =
+        match readings with
+        | _ :: second :: third :: rest -> (getWindowValue readings) @ mapScanningWindowTotals (second :: third :: rest)
+        | first :: second :: rest -> [(first + second)]  @ mapScanningWindowTotals (second :: rest)
+        | first :: _ -> [(first)]
+        | _ -> []
