@@ -8,10 +8,17 @@
         <Content Include="Day1ExampleData.txt">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <None Include="Day1.fsx" />
         <Content Include="Day1PuzzleInput.txt">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
+        <None Include="Day1.fsx" />
+        <Content Include="Day2ExampleData.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Day2PuzzleInput.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <None Include="Day2.fsx" />
     </ItemGroup>
 
     <ItemGroup>
