@@ -6,6 +6,7 @@ open NUnit.Framework
 let sub:Day2.Sub = {
     Horiz = 0
     Depth = 0
+    Aim = 0
 }
 
 let newSub:Day2.Sub =

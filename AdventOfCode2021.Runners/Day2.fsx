@@ -7,6 +7,7 @@ let puzzleData = System.IO.File.ReadLines("./AdventOfCode2021.Runners/bin/Debug/
 let sub:AdventOfCode2021.Days.Day2.Sub = {
     Horiz = 0
     Depth = 0
+    Aim = 0
 }
 
 let c = (puzzleData
@@ -16,3 +17,7 @@ let c = (puzzleData
 let result = AdventOfCode2021.Days.Day2.move (sub, c)
 
 let answer = result.Depth * result.Horiz
+
+let result2 = AdventOfCode2021.Days.Day2.move2 (sub, c)
+
+let answer2 = result2.Depth * result2.Horiz
