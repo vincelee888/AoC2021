@@ -19,6 +19,13 @@
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
         <None Include="Day2.fsx" />
+        <Content Include="Day3ExampleData.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Day3PuzzleInput.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <None Include="Day3.fsx" />
     </ItemGroup>
 
     <ItemGroup>

@@ -45,7 +45,7 @@ module Day2 =
         
     let parseCommand (line:String): Command =
         let parts = line.Split " "
-        let command = mapDirection parts.[0]
+        let direction = mapDirection parts.[0]
         let amount = parts.[1] |> int
         
-        (command.Value, amount)
+        (direction.Value, amount)
